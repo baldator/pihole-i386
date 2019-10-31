@@ -1,5 +1,8 @@
 # Docker Pi-hole
 
+
+### `pihole/pihole:latest` [![](https://images.microbadger.com/badges/image/baldator/pihole-i386:latest.svg)](https://microbadger.com/images/baldator/pihole-i386 "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/baldator/pihole-i386:latest.svg)](https://microbadger.com/images/baldator/pihole-i386 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/version/baldator/pihole-i386:latest.svg)](https://microbadger.com/images/baldator/pihole-i386 "Get your own version badge on microbadger.com")
+
 <p align="center">
 <a href="https://pi-hole.net"><img src="https://pi-hole.github.io/graphics/Vortex/Vortex_with_text.png" width="150" height="255" alt="Pi-hole"></a><br/>
 </p>
@@ -143,13 +146,6 @@ network:
 Note that it is also possible to disable `systemd-resolved` entirely. However, this can cause problems with name resolution in vpns ([see bug report](https://bugs.launchpad.net/network-manager/+bug/1624317)). It also disables the functionality of netplan since systemd-resolved is used as the default renderer ([see `man netplan`](http://manpages.ubuntu.com/manpages/bionic/man5/netplan.5.html#description)). If you choose to disable the service, you will need to manually set the nameservers, for example by creating a new `/etc/resolv.conf`.
 
 Users of older Ubuntu releases (circa 17.04) will need to disable dnsmasq.
-
-
-### `pihole/pihole:latest` [![](https://images.microbadger.com/badges/image/baldator/pihole-i386:latest.svg)](https://microbadger.com/images/baldator/pihole-i386 "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/baldator/pihole-i386:latest.svg)](https://microbadger.com/images/baldator/pihole-i386 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/version/baldator/pihole-i386:latest.svg)](https://microbadger.com/images/baldator/pihole-i386 "Get your own version badge on microbadger.com")
-
-This version of the docker aims to be as close to a standard Pi-hole installation by using the recommended base OS and the exact configs and scripts (minimally modified to get them working).  This enables fast updating when an update comes from Pi-hole.
-
-https://hub.docker.com/r/pihole/pihole/tags/
 
 ## Upgrading, Persistence, and Customizations
 
