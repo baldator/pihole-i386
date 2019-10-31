@@ -17,7 +17,7 @@ version: "3"
 services:
   pihole:
     container_name: pihole
-    image: pihole/pihole:latest
+    image: baldator/pihole-i386:latest
     ports:
       - "53:53/tcp"
       - "53:53/udp"
@@ -144,18 +144,8 @@ Note that it is also possible to disable `systemd-resolved` entirely. However, t
 
 Users of older Ubuntu releases (circa 17.04) will need to disable dnsmasq.
 
-## Docker tags and versioning
 
-The primary docker tags / versions are explained in the following table.  [Click here to see the full list of tags](https://store.docker.com/community/images/pihole/pihole/tags) ([arm tags are here](https://store.docker.com/community/images/pihole/pihole/tags)), I also try to tag with the specific version of Pi-hole Core for version archival purposes, the web version that comes with the core releases should be in the [GitHub Release notes](https://github.com/pi-hole/docker-pi-hole/releases).
-
-| tag                 | architecture | description                                                             | Dockerfile |
-| ---                 | ------------ | -----------                                                             | ---------- |
-| `latest`            | auto detect  | x86, arm, or arm64 container, docker auto detects your architecture.    | [Dockerfile](https://github.com/pi-hole/docker-pi-hole/blob/master/Dockerfile_amd64) |
-| `v4.0.0-1`          | auto detect  | Versioned tags, if you want to pin against a specific version, use one of thesse |  |
-| `v4.0.0-1_<arch>`   | based on tag | Specific architectures tags | |
-| `dev`       | auto detect  | like latest tag, but for the development branch (pushed occasionally)   | |
-
-### `pihole/pihole:latest` [![](https://images.microbadger.com/badges/image/pihole/pihole:latest.svg)](https://microbadger.com/images/pihole/pihole "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/pihole/pihole:latest.svg)](https://microbadger.com/images/pihole/pihole "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/version/pihole/pihole:latest.svg)](https://microbadger.com/images/pihole/pihole "Get your own version badge on microbadger.com")
+### `pihole/pihole:latest` [![](https://images.microbadger.com/badges/image/baldator/pihole-i386:latest.svg)](https://microbadger.com/images/baldator/pihole-i386 "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/baldator/pihole-i386:latest.svg)](https://microbadger.com/images/baldator/pihole-i386 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/version/baldator/pihole-i386:latest.svg)](https://microbadger.com/images/baldator/pihole-i386 "Get your own version badge on microbadger.com")
 
 This version of the docker aims to be as close to a standard Pi-hole installation by using the recommended base OS and the exact configs and scripts (minimally modified to get them working).  This enables fast updating when an update comes from Pi-hole.
 
